@@ -7,10 +7,9 @@ package control;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -34,14 +33,15 @@ public class IOManager {
      */
     public boolean saveVormVerzameling(VormVerzameling vV) {
         try {
-            File f = new File(home + s + "vormverzameling.dat");
-            FileOutputStream fos = new FileOutputStream(f);
+            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + "/VAT/");
+            int result = fileChooser.showSaveDialog(null);
+            if (result == JFileChooser.ABORT) return false;
+            FileOutputStream fos = new FileOutputStream(fileChooser.getSelectedFile());
             try (ObjectOutputStream oos = new ObjectOutputStream(fos)) {
                 oos.writeObject(vV);
             }
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
             return false;
         }
     }
@@ -52,14 +52,16 @@ public class IOManager {
      */
     public VormVerzameling laadVormVerzameling() {
         try {
+            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + "/VAT/");
+            int result = fileChooser.showOpenDialog(null);
+            if (result == JFileChooser.ABORT) return null;
             VormVerzameling vV;
-            File f = new File(home + s + "vormverzameling.dat");
-            FileInputStream fis = new FileInputStream(f);
+            FileInputStream fis = new FileInputStream(fileChooser.getSelectedFile());
             try (ObjectInputStream ois = new ObjectInputStream(fis)) {
                 vV = (VormVerzameling) ois.readObject();
             }
             return vV;
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (Exception e) {
             return null;
         }
     }

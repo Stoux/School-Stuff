@@ -7,6 +7,7 @@ package boundary;
 import control.VormControle;
 import entity.Vorm;
 import javax.swing.DefaultListModel;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,7 +27,6 @@ public class HoofdFrame extends javax.swing.JFrame {
         //Zet scherm in het midden
         setLocationRelativeTo(null);
         setVisible(true);
-        laadVerzameling(false);
     }
     
     /**
@@ -52,23 +52,9 @@ public class HoofdFrame extends javax.swing.JFrame {
      * @param titel titel
      * @param typeMessage Type message 
      */
-    private void showMessage(String message, String titel, int typeMessage) {
-        JOptionPane.showMessageDialog(this, message, titel, typeMessage);
-    }
-    
-    /**
-     * Laad de verzameling in
-     * @param error geef foutmelding als die niet kan laden
-     */
-    private void laadVerzameling(boolean error) {
-        if (vormControle.laadVormVerzameling()) {
-            verversScherm();
-            showMessage("De verzameling is geladen!", "Succes", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            if (error) showMessage("Helaas, er is geen verzameling geladen.", "Mislukt", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    
+    private void showMessage(String message, String titel) {
+        JOptionPane.showMessageDialog(this, message, titel, JOptionPane.ERROR_MESSAGE);
+    }    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -305,21 +291,22 @@ public class HoofdFrame extends javax.swing.JFrame {
             verversScherm();
             inhoudField.setText("");
         } else {
-            showMessage("Er is geen item geselecteerd.", "Foutmelding", JOptionPane.ERROR_MESSAGE);
+            showMessage("Er is geen item geselecteerd.", "Foutmelding");
         }
         verwijderVormButton.setEnabled(false);
     }//GEN-LAST:event_verwijderVormButtonActionPerformed
 
     private void lijstOpslaanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lijstOpslaanButtonActionPerformed
         if (vormControle.slaVormVerzamelingOp()) {
-            showMessage("Verzameling is succesvol opgeslagen!", "Succes", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            showMessage("Het is niet gelukt om de verzameling op te slaan.", "Mislukt", JOptionPane.ERROR_MESSAGE);
+            showMessage("Verzameling is succesvol opgeslagen!", "Succes");
         }
     }//GEN-LAST:event_lijstOpslaanButtonActionPerformed
 
     private void lijstLadenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lijstLadenButtonActionPerformed
-         laadVerzameling(true);
+         if (vormControle.laadVormVerzameling()) {
+             showMessage("Verzameling is succesvol geladen!", "Succes");
+             verversScherm();
+         }
     }//GEN-LAST:event_lijstLadenButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
