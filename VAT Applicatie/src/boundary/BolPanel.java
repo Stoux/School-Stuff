@@ -82,6 +82,7 @@ public class BolPanel extends VormPanel {
 
     @Override
     public boolean voegToe() {
+        fout = ""; foutGevonden = false;
         if (!vormControle.isGeldigeDouble(straalField.getText())) addFout("straal");
         if (foutGevonden) {
             laatFoutmeldingZien();

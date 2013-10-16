@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="nl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>VormControle.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="right"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;VAT_Applicatie&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.html" class="el_package">control</a> &gt; <span class="el_source">VormControle.java</span></div><h1>VormControle.java</h1><pre class="source lang-java linenums">/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package control;
+
+import entity.Blok;
+import entity.Bol;
+import entity.Cilinder;
+import entity.Vorm;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Leon
+ */
+public class VormControle {
+    
+    private VormVerzameling vormVerzameling;
+    private IOManager ioManager;
+    
+<span class="fc" id="L22">    public VormControle() {</span>
+<span class="fc" id="L23">        ioManager = new IOManager();</span>
+<span class="fc" id="L24">        vormVerzameling = new VormVerzameling();</span>
+<span class="fc" id="L25">    }</span>
+    
+    /**
+     * Parse een String naar double
+     * @param s de String
+     * @return 
+     */
+    public double parseDouble(String s) {
+        double d;
+        try {
+<span class="fc" id="L35">            d = Double.parseDouble(s);</span>
+<span class="nc" id="L36">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L37">            d = 0;</span>
+<span class="fc" id="L38">        }</span>
+<span class="fc" id="L39">        return d;</span>
+    }
+    
+    /**
+     * Check of een string een double is &amp; groter dan 0 is
+     * @param s De string
+     * @return is een double
+     */
+    public boolean isGeldigeDouble(String s) {
+        boolean returnBoolean;
+        try {
+<span class="fc" id="L50">            double d = Double.parseDouble(s);</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">            if (d &gt; 0) returnBoolean = true;</span>
+<span class="nc" id="L52">            else returnBoolean = false;</span>
+<span class="fc" id="L53">        } catch (NumberFormatException e) {</span>
+<span class="fc" id="L54">            returnBoolean = false;</span>
+<span class="fc" id="L55">        }</span>
+<span class="fc" id="L56">        return returnBoolean;</span>
+    }
+    
+    /**
+     * Maak een nieuwe bol aan
+     * @param straal de straal
+     */
+    public void maakBol(double straal) {
+<span class="fc" id="L64">        vormVerzameling.voegToe(new Bol(straal));</span>
+<span class="fc" id="L65">    }</span>
+    
+    /**
+     * Maak een nieuw blok aan
+     * @param lengte de lengte
+     * @param breedte de breedte
+     * @param hoogte de hoogte
+     */
+    public void maakBlok(double lengte, double breedte, double hoogte) {
+<span class="fc" id="L74">        vormVerzameling.voegToe(new Blok(hoogte, breedte, lengte));</span>
+<span class="fc" id="L75">    }</span>
+    
+    /**
+     * Maak een nieuwe cilinder aan
+     * @param straal de straal
+     * @param hoogte de hoogte
+     */
+    public void maakCilinder(double straal, double hoogte) {
+<span class="fc" id="L83">        vormVerzameling.voegToe(new Cilinder(straal, hoogte));</span>
+<span class="fc" id="L84">    }</span>
+    
+    /**
+     * Haal een vorm op aan de hand van de positie in de lijst
+     * @param index de positie
+     */
+    public Vorm getVorm(int index) {
+<span class="fc" id="L91">        return vormVerzameling.getVorm(index);</span>
+    }
+    
+    /**
+     * Verwijder een vorm aan de hand van de positie in de lijst
+     * @param index positie 
+     */
+    public void verwijderVorm(int index) {
+<span class="nc" id="L99">        vormVerzameling.verwijderVorm(index);</span>
+<span class="nc" id="L100">    }</span>
+    
+    public ArrayList&lt;Vorm&gt; getAlleVormen() {
+<span class="nc" id="L103">        return vormVerzameling.getAlleVormen();</span>
+    }
+    
+    /**
+     * Haal de totale inhoud op van alle vormen
+     * @return de inhoud
+     */
+    public double totaalInhoud() {
+<span class="fc" id="L111">        double d = 0;</span>
+<span class="fc bfc" id="L112" title="All 2 branches covered.">        for (Vorm v : vormVerzameling.getAlleVormen()) {</span>
+<span class="fc" id="L113">            d = d + v.getInhoud();</span>
+<span class="fc" id="L114">        }</span>
+<span class="fc" id="L115">        return d;</span>
+    }
+    
+    /**
+     * Sla de huidge VormVerameling op
+     * @return gelukt
+     */
+    public boolean slaVormVerzamelingOp() {
+<span class="nc" id="L123">        return ioManager.saveVormVerzameling(vormVerzameling);</span>
+    }
+    
+    /**
+     * Laad een eventuele opgeslagen VormVerzameling
+     * @return gelukt
+     */
+    public boolean laadVormVerzameling() {
+        boolean returnBoolean;
+<span class="nc" id="L132">        VormVerzameling vV = ioManager.laadVormVerzameling();</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">        if (vV == null) {</span>
+<span class="nc" id="L134">            return false;</span>
+        } else {
+<span class="nc" id="L136">            vormVerzameling = vV;</span>
+<span class="nc" id="L137">            return true;</span>
+        }
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.6.3.201306030806</span></div></body></html>
