@@ -72,5 +72,20 @@ public class VormVerzamelingTest {
         assertTrue(vV.getAlleVormen().isEmpty());
     }
     
+    @Test
+    public void toStringTest() {
+        System.out.println("Testing: toString");
+        Vorm v = new Blok(2,2,2);
+        Vorm v2 = new Blok(4,4,2);
+        Vorm v3 = new Blok(2,3,3);
+        vV.voegToe(v);
+        vV.voegToe(v2);
+        vV.voegToe(v3);
+        System.out.println(vV.toString());
+        assertEquals(vV.toString(), "\nBlok | Hoogte: 2.0 | Breedte: 2.0 | Lengte: 2.0\n" +
+                                    "Blok | Hoogte: 4.0 | Breedte: 4.0 | Lengte: 2.0\n" +
+                                    "Blok | Hoogte: 2.0 | Breedte: 3.0 | Lengte: 3.0");
+    }
+    
     
 }

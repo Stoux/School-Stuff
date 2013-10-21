@@ -5,21 +5,20 @@
 package boundary;
 
 import control.VormControle;
-import javax.swing.Icon;
-import javax.swing.JOptionPane;
 
 /**
- *
- * @author Leon
+ * Panel voor het toevoegen van een Blok Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class BlokPanel extends VormPanel {
-
-    private VormControle vormControle;
     
     /**
      * Creates new form BlokPanel
      */
     public BlokPanel(VormControle vormControle) {
+        super(vormControle);
         this.vormControle = vormControle;
         initComponents();
     }

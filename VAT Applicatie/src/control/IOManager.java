@@ -4,44 +4,37 @@
  */
 package control;
 
-import java.io.File;
+import boundary.FileSelector;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
- *
- * @author Leon
+ * Manager voor het wegschrijven/ophalen van bestanden
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class IOManager {
-    
-    private String home;
-    private String s;
-    
-    public IOManager() {
-        s = File.separator;
-        home = System.getProperty("user.home") + s + "VAT" + s;
-        new File(home).mkdirs();
-    }
     
     /**
      * Schrijf een {@link VormVerzameling} weg naar de hardeschijf
      * @param vV De verzamling
      * @return gelukt
      */
-    public boolean saveVormVerzameling(VormVerzameling vV) {
+    public static boolean saveVormVerzameling(VormVerzameling vV) {
         try {
-            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + "/VAT/");
-            int result = fileChooser.showSaveDialog(null);
-            if (result == JFileChooser.ABORT) return false;
-            FileOutputStream fos = new FileOutputStream(fileChooser.getSelectedFile());
+            FileSelector fileSelector = new FileSelector();
+            if (!fileSelector.showSaveDialog()) return false;
+            FileOutputStream fos = new FileOutputStream(fileSelector.getSelecteerdeFile());
             try (ObjectOutputStream oos = new ObjectOutputStream(fos)) {
                 oos.writeObject(vV);
             }
             return true;
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Het opslaan is mislukt!", "Mislukt", JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
@@ -50,18 +43,18 @@ public class IOManager {
      * Laad een {@link VormVerzameling} van de harde schijf
      * @return de VormVerzameling of null als er niks gevonden is
      */
-    public VormVerzameling laadVormVerzameling() {
+    public static VormVerzameling laadVormVerzameling() {
         try {
-            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + "/VAT/");
-            int result = fileChooser.showOpenDialog(null);
-            if (result == JFileChooser.ABORT) return null;
+            FileSelector selector = new FileSelector();
+            if (!selector.showOpenDialog()) return null;
             VormVerzameling vV;
-            FileInputStream fis = new FileInputStream(fileChooser.getSelectedFile());
+            FileInputStream fis = new FileInputStream(selector.getSelecteerdeFile());
             try (ObjectInputStream ois = new ObjectInputStream(fis)) {
                 vV = (VormVerzameling) ois.readObject();
             }
             return vV;
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Dit bestand is niet een vorm verzameling!", "Fout bestand", JOptionPane.ERROR_MESSAGE);
             return null;
         }
     }

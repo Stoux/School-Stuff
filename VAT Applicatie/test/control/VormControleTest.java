@@ -8,6 +8,7 @@ import entity.Blok;
 import entity.Bol;
 import entity.Cilinder;
 import entity.Vorm;
+import javax.swing.JOptionPane;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -54,15 +55,30 @@ public class VormControleTest {
     }
     
     @Test
+    public void parseDoubleIncorrect() {
+        System.out.println("Testing: parseDouble incorrect");
+        String s = "LOL";
+        double d = vC.parseDouble(s);
+        assertEquals(d, 0, 0.01);
+    }
+    
+    @Test
     public void isDoubleCorrect() {
-        System.out.println("Testing: isDouble() correct");
+        System.out.println("Testing: isGeldigeDouble() correct");
         boolean geldig = vC.isGeldigeDouble("12.24");
         assertTrue(geldig);
     }
     
     @Test
+    public void isDoubleIncorrectNul() {
+        System.out.println("Testing: isDouble() incorrect (Onder 0)");
+        boolean geldig = vC.isGeldigeDouble("-1.12");
+        assertFalse(geldig);
+    }
+    
+    @Test
     public void isDoubleIncorrect() {
-        System.out.println("Testing: isDouble() correct");
+        System.out.println("Testing: isGeldigeDouble() incorrect (String)");
         boolean geldig = vC.isGeldigeDouble("LOL");
         assertFalse(geldig);
     }
@@ -97,7 +113,46 @@ public class VormControleTest {
         vC.maakBlok(5, 5, 5);
         vC.maakBlok(2, 2, 2);
         double d = vC.totaalInhoud();
-        assertEquals(d, 133, 0.01);
+        assertEquals(d, 133, 0.01); 
     }
     
+    @Test
+    public void verwijderVorm() {
+        System.out.println("Testing: verwijderVorm");
+        vC.maakBlok(2, 2, 2);
+        vC.maakBlok(1, 1, 1);
+        assertEquals(vC.getAlleVormen().size(), 2);
+        assertEquals(vC.getVorm(0).getInhoud(), 8, 0.01);
+        vC.verwijderVorm(0);
+        assertEquals(vC.getAlleVormen().size(), 1);
+        assertEquals(vC.getVorm(0).getInhoud(), 1, 0.01);
+    }
+    
+    @Test
+    public void saveVerzameling() {
+        sendJOption("Correct Save test");
+        System.out.println("Testing: saveVerzameling");
+        vC.maakBlok(3, 3, 3);
+        vC.maakBlok(2, 2, 2);
+        assertEquals(vC.getAlleVormen().size(), 2);
+        assertTrue(vC.slaVormVerzamelingOp());
+        vC.getAlleVormen().clear();
+        assertEquals(vC.getAlleVormen().size(), 0);
+        System.out.println("Testing: laadVerzameling");
+        assertTrue(vC.laadVormVerzameling());
+        assertEquals(vC.getAlleVormen().size(), 2);
+        assertEquals(vC.getVorm(0).getInhoud(), 27, 0.01);
+        assertEquals(vC.getVorm(1).getInhoud(), 8, 0.01);
+    }
+    
+    @Test
+    public void faalLaden() {
+        System.out.println("Testing: laadVerzameling incorrect");
+        sendJOption("Selecteer een niet Verzameling object");
+        assertFalse(vC.laadVormVerzameling());
+    }
+    
+    private void sendJOption(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
 }

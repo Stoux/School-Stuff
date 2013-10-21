@@ -16,23 +16,23 @@ public class Bol extends Vorm {
      * Maak een nieuwe bol aan
      * @param straal De straal van de bol
      */
-<span class="fc" id="L19">    public Bol(double straal) {</span>
-<span class="fc" id="L20">        this.straal = straal;</span>
-<span class="fc" id="L21">    }</span>
+<span class="nc" id="L19">    public Bol(double straal) {</span>
+<span class="nc" id="L20">        this.straal = straal;</span>
+<span class="nc" id="L21">    }</span>
     
     @Override
     public double getInhoud() {
-<span class="nc" id="L25">        return ((1.0 / 3.0) * 4.0) * Math.PI * Math.pow(straal, 3);</span>
+<span class="fc" id="L25">        return ((1.0 / 3.0) * 4.0) * Math.PI * Math.pow(straal, 3);</span>
     }
 
     @Override
     public String getNaam() {
-<span class="nc" id="L30">        return &quot;Bol&quot;;</span>
+<span class="fc" id="L30">        return &quot;Bol&quot;;</span>
     }
 
     @Override
     public String getDimensies() {
-<span class="nc" id="L35">        return &quot;Straal: &quot; + straal;</span>
+<span class="fc" id="L35">        return &quot;Straal: &quot; + straal;</span>
     }
     
 }

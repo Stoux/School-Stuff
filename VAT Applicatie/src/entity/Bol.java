@@ -5,8 +5,10 @@
 package entity;
 
 /**
- *
- * @author Leon
+ * Een Bol Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class Bol extends Vorm {
 

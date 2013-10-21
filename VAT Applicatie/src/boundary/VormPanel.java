@@ -4,17 +4,30 @@
  */
 package boundary;
 
+import control.VormControle;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Leon
+ * Panel voor het toevoegen van een Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public abstract class VormPanel extends JPanel {
     
+    protected VormControle vormControle;
+    
     protected boolean foutGevonden;
     protected String fout;
+
+    /**
+     * Constructor
+     * @param vormControle De vorm controller
+     */
+    public VormPanel(VormControle vormControle) {
+        this.vormControle = vormControle;
+    }
     
     /**
      * Probeer de vorm toe te voegen

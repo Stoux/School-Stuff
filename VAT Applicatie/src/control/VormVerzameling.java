@@ -9,8 +9,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- *
- * @author Leon
+ * Verzameling class die alle vormen bijhoudt.
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class VormVerzameling implements Serializable {
     

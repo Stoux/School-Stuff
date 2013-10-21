@@ -7,17 +7,18 @@ package boundary;
 import control.VormControle;
 
 /**
- *
- * @author Leon
+ * Panel voor het toevoegen van een Bol Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class BolPanel extends VormPanel {
-
-    private VormControle vormControle;
     
     /**
      * Creates new form BolPanel
      */
     public BolPanel(VormControle vormControle) {
+        super(vormControle);
         this.vormControle = vormControle;
         initComponents();
     }

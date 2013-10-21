@@ -7,9 +7,9 @@ package entity;
 import java.io.Serializable;
 
 /**
- * Een vorm klass die andere vormen kunnen extenden
- * 16-10-2013
- * VH5I
+ * Een vorm class die andere vormen kunnen extenden
+ * Module: VH5I
+ * Datum: 10-2013
  * @author Leon Stam
  */
 public abstract class Vorm implements Serializable {

@@ -20,14 +20,14 @@ import javax.swing.UIManager;
      */
     public static void main(String[] args) {
         try { //Probeer de Look And Feel -&gt; Nimbus te zetten
-<span class="nc bnc" id="L23" title="All 2 branches missed.">            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L24" title="All 2 branches missed.">                if (info.getName().equals(&quot;Nimbus&quot;)) {</span>
-<span class="nc" id="L25">                    UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L26">                    break;</span>
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                if (info.getName().equals(&quot;Nimbus&quot;)) {</span>
+<span class="fc" id="L25">                    UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="fc" id="L26">                    break;</span>
                 }
             }
-<span class="nc" id="L29">        } catch (Exception e) { }</span>
-<span class="nc" id="L30">        new HoofdFrame(new VormControle());</span>
-<span class="nc" id="L31">    }</span>
+<span class="pc" id="L29">        } catch (Exception e) { }</span>
+<span class="fc" id="L30">        new HoofdFrame(new VormControle());</span>
+<span class="fc" id="L31">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.6.3.201306030806</span></div></body></html>

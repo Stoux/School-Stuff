@@ -7,12 +7,13 @@ package boundary;
 import control.VormControle;
 import entity.Vorm;
 import javax.swing.DefaultListModel;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Leon
+ * Het hoofdscherm van de applicatie
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class HoofdFrame extends javax.swing.JFrame {
 

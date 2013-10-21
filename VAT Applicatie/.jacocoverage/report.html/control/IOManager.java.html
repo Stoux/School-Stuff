@@ -52,17 +52,17 @@ public class IOManager {
      */
     public VormVerzameling laadVormVerzameling() {
         try {
-<span class="nc" id="L55">            JFileChooser fileChooser = new JFileChooser(System.getProperty(&quot;user.home&quot;) + &quot;/VAT/&quot;);</span>
-<span class="nc" id="L56">            int result = fileChooser.showOpenDialog(null);</span>
-<span class="nc bnc" id="L57" title="All 2 branches missed.">            if (result == JFileChooser.ABORT) return null;</span>
+<span class="fc" id="L55">            JFileChooser fileChooser = new JFileChooser(System.getProperty(&quot;user.home&quot;) + &quot;/VAT/&quot;);</span>
+<span class="fc" id="L56">            int result = fileChooser.showOpenDialog(null);</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">            if (result == JFileChooser.ABORT) return null;</span>
             VormVerzameling vV;
-<span class="nc" id="L59">            FileInputStream fis = new FileInputStream(fileChooser.getSelectedFile());</span>
-<span class="nc" id="L60">            try (ObjectInputStream ois = new ObjectInputStream(fis)) {</span>
-<span class="nc" id="L61">                vV = (VormVerzameling) ois.readObject();</span>
-<span class="nc bnc" id="L62" title="All 8 branches missed.">            }</span>
-<span class="nc" id="L63">            return vV;</span>
-<span class="nc" id="L64">        } catch (Exception e) {</span>
-<span class="nc" id="L65">            return null;</span>
+<span class="fc" id="L59">            FileInputStream fis = new FileInputStream(fileChooser.getSelectedFile());</span>
+<span class="pc" id="L60">            try (ObjectInputStream ois = new ObjectInputStream(fis)) {</span>
+<span class="fc" id="L61">                vV = (VormVerzameling) ois.readObject();</span>
+<span class="pc bpc" id="L62" title="6 of 8 branches missed.">            }</span>
+<span class="fc" id="L63">            return vV;</span>
+<span class="fc" id="L64">        } catch (Exception e) {</span>
+<span class="fc" id="L65">            return null;</span>
         }
     }
     

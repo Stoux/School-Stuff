@@ -5,13 +5,14 @@
 package main;
 
 import boundary.HoofdFrame;
-import boundary.VormFrame;
 import control.VormControle;
 import javax.swing.UIManager;
 
 /**
- *
- * @author Leon
+ * Main class die het systeem opstart
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class Main {
 

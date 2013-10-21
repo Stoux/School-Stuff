@@ -11,16 +11,16 @@ import entity.Vorm;
 import java.util.ArrayList;
 
 /**
- *
- * @author Leon
+ * Controle class die alles omtrent de vormen regelt
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class VormControle {
     
     private VormVerzameling vormVerzameling;
-    private IOManager ioManager;
     
     public VormControle() {
-        ioManager = new IOManager();
         vormVerzameling = new VormVerzameling();
     }
     
@@ -120,7 +120,7 @@ public class VormControle {
      * @return gelukt
      */
     public boolean slaVormVerzamelingOp() {
-        return ioManager.saveVormVerzameling(vormVerzameling);
+        return IOManager.saveVormVerzameling(vormVerzameling);
     }
     
     /**
@@ -129,7 +129,7 @@ public class VormControle {
      */
     public boolean laadVormVerzameling() {
         boolean returnBoolean;
-        VormVerzameling vV = ioManager.laadVormVerzameling();
+        VormVerzameling vV = IOManager.laadVormVerzameling();
         if (vV == null) {
             return false;
         } else {

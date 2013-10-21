@@ -7,17 +7,18 @@ package boundary;
 import control.VormControle;
 
 /**
- *
- * @author Leon
+ * Panel voor het toevoegen van een Cilinder Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class CilinderPanel extends VormPanel {
-
-    private VormControle vormControle;
     
     /**
      * Creates new form CilinderPanel
      */
     public CilinderPanel(VormControle vormControle) {
+        super(vormControle);
         this.vormControle = vormControle;
         initComponents();
     }

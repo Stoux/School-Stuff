@@ -8,8 +8,10 @@ import control.VormControle;
 import java.awt.BorderLayout;
 
 /**
- *
- * @author Leon
+ * Frame voor het toevoegen van een Form
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class VormFrame extends javax.swing.JFrame {
 
@@ -17,7 +19,7 @@ public class VormFrame extends javax.swing.JFrame {
     private HoofdFrame hoofdFrame;
     
     /**
-     * Creates new form BlokFrame
+     * Creates new form VormFrame
      */
     public VormFrame(HoofdFrame hoofdFrame, VormControle vormControle, String type) {
         this.hoofdFrame = hoofdFrame;
@@ -89,6 +91,7 @@ public class VormFrame extends javax.swing.JFrame {
         vormPanelHolder = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Leon Stam, 2058473, 10-2013");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
 
