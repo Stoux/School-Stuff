@@ -11,16 +11,16 @@ import entity.Vorm;
 import java.util.ArrayList;
 
 /**
- *
- * @author Leon
+ * Controle class die alles omtrent de vormen regelt
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class VormControle {
     
     private VormVerzameling vormVerzameling;
-    private IOManager ioManager;
     
-<span class="fc" id="L22">    public VormControle() {</span>
-<span class="fc" id="L23">        ioManager = new IOManager();</span>
+<span class="fc" id="L23">    public VormControle() {</span>
 <span class="fc" id="L24">        vormVerzameling = new VormVerzameling();</span>
 <span class="fc" id="L25">    }</span>
     
@@ -32,11 +32,11 @@ public class VormControle {
     public double parseDouble(String s) {
         double d;
         try {
-<span class="nc" id="L35">            d = Double.parseDouble(s);</span>
-<span class="nc" id="L36">        } catch (NumberFormatException e) {</span>
-<span class="nc" id="L37">            d = 0;</span>
-<span class="nc" id="L38">        }</span>
-<span class="nc" id="L39">        return d;</span>
+<span class="fc" id="L35">            d = Double.parseDouble(s);</span>
+<span class="fc" id="L36">        } catch (NumberFormatException e) {</span>
+<span class="fc" id="L37">            d = 0;</span>
+<span class="fc" id="L38">        }</span>
+<span class="fc" id="L39">        return d;</span>
     }
     
     /**
@@ -47,13 +47,13 @@ public class VormControle {
     public boolean isGeldigeDouble(String s) {
         boolean returnBoolean;
         try {
-<span class="nc" id="L50">            double d = Double.parseDouble(s);</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">            if (d &gt; 0) returnBoolean = true;</span>
-<span class="nc" id="L52">            else returnBoolean = false;</span>
-<span class="nc" id="L53">        } catch (NumberFormatException e) {</span>
-<span class="nc" id="L54">            returnBoolean = false;</span>
-<span class="nc" id="L55">        }</span>
-<span class="nc" id="L56">        return returnBoolean;</span>
+<span class="fc" id="L50">            double d = Double.parseDouble(s);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">            if (d &gt; 0) returnBoolean = true;</span>
+<span class="fc" id="L52">            else returnBoolean = false;</span>
+<span class="fc" id="L53">        } catch (NumberFormatException e) {</span>
+<span class="fc" id="L54">            returnBoolean = false;</span>
+<span class="fc" id="L55">        }</span>
+<span class="fc" id="L56">        return returnBoolean;</span>
     }
     
     /**
@@ -61,8 +61,8 @@ public class VormControle {
      * @param straal de straal
      */
     public void maakBol(double straal) {
-<span class="nc" id="L64">        vormVerzameling.voegToe(new Bol(straal));</span>
-<span class="nc" id="L65">    }</span>
+<span class="fc" id="L64">        vormVerzameling.voegToe(new Bol(straal));</span>
+<span class="fc" id="L65">    }</span>
     
     /**
      * Maak een nieuw blok aan
@@ -71,8 +71,8 @@ public class VormControle {
      * @param hoogte de hoogte
      */
     public void maakBlok(double lengte, double breedte, double hoogte) {
-<span class="nc" id="L74">        vormVerzameling.voegToe(new Blok(hoogte, breedte, lengte));</span>
-<span class="nc" id="L75">    }</span>
+<span class="fc" id="L74">        vormVerzameling.voegToe(new Blok(hoogte, breedte, lengte));</span>
+<span class="fc" id="L75">    }</span>
     
     /**
      * Maak een nieuwe cilinder aan
@@ -80,15 +80,15 @@ public class VormControle {
      * @param hoogte de hoogte
      */
     public void maakCilinder(double straal, double hoogte) {
-<span class="nc" id="L83">        vormVerzameling.voegToe(new Cilinder(straal, hoogte));</span>
-<span class="nc" id="L84">    }</span>
+<span class="fc" id="L83">        vormVerzameling.voegToe(new Cilinder(straal, hoogte));</span>
+<span class="fc" id="L84">    }</span>
     
     /**
      * Haal een vorm op aan de hand van de positie in de lijst
      * @param index de positie
      */
     public Vorm getVorm(int index) {
-<span class="nc" id="L91">        return vormVerzameling.getVorm(index);</span>
+<span class="fc" id="L91">        return vormVerzameling.getVorm(index);</span>
     }
     
     /**
@@ -96,8 +96,8 @@ public class VormControle {
      * @param index positie 
      */
     public void verwijderVorm(int index) {
-<span class="nc" id="L99">        vormVerzameling.verwijderVorm(index);</span>
-<span class="nc" id="L100">    }</span>
+<span class="fc" id="L99">        vormVerzameling.verwijderVorm(index);</span>
+<span class="fc" id="L100">    }</span>
     
     public ArrayList&lt;Vorm&gt; getAlleVormen() {
 <span class="fc" id="L103">        return vormVerzameling.getAlleVormen();</span>
@@ -120,7 +120,7 @@ public class VormControle {
      * @return gelukt
      */
     public boolean slaVormVerzamelingOp() {
-<span class="nc" id="L123">        return ioManager.saveVormVerzameling(vormVerzameling);</span>
+<span class="fc" id="L123">        return IOManager.saveVormVerzameling(vormVerzameling);</span>
     }
     
     /**
@@ -129,7 +129,7 @@ public class VormControle {
      */
     public boolean laadVormVerzameling() {
         boolean returnBoolean;
-<span class="fc" id="L132">        VormVerzameling vV = ioManager.laadVormVerzameling();</span>
+<span class="fc" id="L132">        VormVerzameling vV = IOManager.laadVormVerzameling();</span>
 <span class="fc bfc" id="L133" title="All 2 branches covered.">        if (vV == null) {</span>
 <span class="fc" id="L134">            return false;</span>
         } else {

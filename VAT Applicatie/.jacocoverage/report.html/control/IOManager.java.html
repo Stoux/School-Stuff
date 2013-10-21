@@ -4,45 +4,38 @@
  */
 package control;
 
-import java.io.File;
+import boundary.FileSelector;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
- *
- * @author Leon
+ * Manager voor het wegschrijven/ophalen van bestanden
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
-public class IOManager {
-    
-    private String home;
-    private String s;
-    
-<span class="fc" id="L23">    public IOManager() {</span>
-<span class="fc" id="L24">        s = File.separator;</span>
-<span class="fc" id="L25">        home = System.getProperty(&quot;user.home&quot;) + s + &quot;VAT&quot; + s;</span>
-<span class="fc" id="L26">        new File(home).mkdirs();</span>
-<span class="fc" id="L27">    }</span>
+<span class="nc" id="L20">public class IOManager {</span>
     
     /**
      * Schrijf een {@link VormVerzameling} weg naar de hardeschijf
      * @param vV De verzamling
      * @return gelukt
      */
-    public boolean saveVormVerzameling(VormVerzameling vV) {
+    public static boolean saveVormVerzameling(VormVerzameling vV) {
         try {
-<span class="nc" id="L36">            JFileChooser fileChooser = new JFileChooser(System.getProperty(&quot;user.home&quot;) + &quot;/VAT/&quot;);</span>
-<span class="nc" id="L37">            int result = fileChooser.showSaveDialog(null);</span>
-<span class="nc bnc" id="L38" title="All 2 branches missed.">            if (result == JFileChooser.ABORT) return false;</span>
-<span class="nc" id="L39">            FileOutputStream fos = new FileOutputStream(fileChooser.getSelectedFile());</span>
-<span class="nc" id="L40">            try (ObjectOutputStream oos = new ObjectOutputStream(fos)) {</span>
-<span class="nc" id="L41">                oos.writeObject(vV);</span>
-<span class="nc bnc" id="L42" title="All 8 branches missed.">            }</span>
-<span class="nc" id="L43">            return true;</span>
-<span class="nc" id="L44">        } catch (Exception e) {</span>
-<span class="nc" id="L45">            return false;</span>
+<span class="fc" id="L29">            FileSelector fileSelector = new FileSelector();</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">            if (!fileSelector.showSaveDialog()) return false;</span>
+<span class="fc" id="L31">            FileOutputStream fos = new FileOutputStream(fileSelector.getSelecteerdeFile());</span>
+<span class="pc" id="L32">            try (ObjectOutputStream oos = new ObjectOutputStream(fos)) {</span>
+<span class="fc" id="L33">                oos.writeObject(vV);</span>
+<span class="pc bpc" id="L34" title="6 of 8 branches missed.">            }</span>
+<span class="fc" id="L35">            return true;</span>
+<span class="nc" id="L36">        } catch (Exception e) {</span>
+<span class="nc" id="L37">            JOptionPane.showMessageDialog(null, &quot;Het opslaan is mislukt!&quot;, &quot;Mislukt&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L38">            return false;</span>
         }
     }
     
@@ -50,19 +43,19 @@ public class IOManager {
      * Laad een {@link VormVerzameling} van de harde schijf
      * @return de VormVerzameling of null als er niks gevonden is
      */
-    public VormVerzameling laadVormVerzameling() {
+    public static VormVerzameling laadVormVerzameling() {
         try {
-<span class="fc" id="L55">            JFileChooser fileChooser = new JFileChooser(System.getProperty(&quot;user.home&quot;) + &quot;/VAT/&quot;);</span>
-<span class="fc" id="L56">            int result = fileChooser.showOpenDialog(null);</span>
-<span class="pc bpc" id="L57" title="1 of 2 branches missed.">            if (result == JFileChooser.ABORT) return null;</span>
+<span class="fc" id="L48">            FileSelector selector = new FileSelector();</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (!selector.showOpenDialog()) return null;</span>
             VormVerzameling vV;
-<span class="fc" id="L59">            FileInputStream fis = new FileInputStream(fileChooser.getSelectedFile());</span>
-<span class="pc" id="L60">            try (ObjectInputStream ois = new ObjectInputStream(fis)) {</span>
-<span class="fc" id="L61">                vV = (VormVerzameling) ois.readObject();</span>
-<span class="pc bpc" id="L62" title="6 of 8 branches missed.">            }</span>
-<span class="fc" id="L63">            return vV;</span>
-<span class="fc" id="L64">        } catch (Exception e) {</span>
-<span class="fc" id="L65">            return null;</span>
+<span class="fc" id="L51">            FileInputStream fis = new FileInputStream(selector.getSelecteerdeFile());</span>
+<span class="pc" id="L52">            try (ObjectInputStream ois = new ObjectInputStream(fis)) {</span>
+<span class="fc" id="L53">                vV = (VormVerzameling) ois.readObject();</span>
+<span class="pc bpc" id="L54" title="6 of 8 branches missed.">            }</span>
+<span class="fc" id="L55">            return vV;</span>
+<span class="nc" id="L56">        } catch (Exception e) {</span>
+<span class="nc" id="L57">            JOptionPane.showMessageDialog(null, &quot;Dit bestand is niet een vorm verzameling!&quot;, &quot;Fout bestand&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L58">            return null;</span>
         }
     }
     

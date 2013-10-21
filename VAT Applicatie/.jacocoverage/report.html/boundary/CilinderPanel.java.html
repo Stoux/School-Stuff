@@ -7,20 +7,21 @@ package boundary;
 import control.VormControle;
 
 /**
- *
- * @author Leon
+ * Panel voor het toevoegen van een Cilinder Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class CilinderPanel extends VormPanel {
-
-    private VormControle vormControle;
     
     /**
      * Creates new form CilinderPanel
      */
-<span class="nc" id="L20">    public CilinderPanel(VormControle vormControle) {</span>
-<span class="nc" id="L21">        this.vormControle = vormControle;</span>
-<span class="nc" id="L22">        initComponents();</span>
-<span class="nc" id="L23">    }</span>
+    public CilinderPanel(VormControle vormControle) {
+<span class="nc" id="L21">        super(vormControle);</span>
+<span class="nc" id="L22">        this.vormControle = vormControle;</span>
+<span class="nc" id="L23">        initComponents();</span>
+<span class="nc" id="L24">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,28 +32,28 @@ public class CilinderPanel extends VormPanel {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L34">        jPanel3 = new javax.swing.JPanel();</span>
-<span class="nc" id="L35">        hoogteLabel = new javax.swing.JLabel();</span>
-<span class="nc" id="L36">        hoogteField = new javax.swing.JTextField();</span>
-<span class="nc" id="L37">        jPanel2 = new javax.swing.JPanel();</span>
-<span class="nc" id="L38">        straalLabel = new javax.swing.JLabel();</span>
-<span class="nc" id="L39">        straalField = new javax.swing.JTextField();</span>
+<span class="nc" id="L35">        jPanel3 = new javax.swing.JPanel();</span>
+<span class="nc" id="L36">        hoogteLabel = new javax.swing.JLabel();</span>
+<span class="nc" id="L37">        hoogteField = new javax.swing.JTextField();</span>
+<span class="nc" id="L38">        jPanel2 = new javax.swing.JPanel();</span>
+<span class="nc" id="L39">        straalLabel = new javax.swing.JLabel();</span>
+<span class="nc" id="L40">        straalField = new javax.swing.JTextField();</span>
 
-<span class="nc" id="L41">        hoogteLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
-<span class="nc" id="L42">        hoogteLabel.setText(&quot;Hoogte&quot;);</span>
+<span class="nc" id="L42">        hoogteLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L43">        hoogteLabel.setText(&quot;Hoogte&quot;);</span>
 
-<span class="nc" id="L44">        hoogteField.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L45">        hoogteField.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
 
-<span class="nc" id="L46">        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);</span>
-<span class="nc" id="L47">        jPanel3.setLayout(jPanel3Layout);</span>
-<span class="nc" id="L48">        jPanel3Layout.setHorizontalGroup(</span>
+<span class="nc" id="L47">        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);</span>
+<span class="nc" id="L48">        jPanel3.setLayout(jPanel3Layout);</span>
+<span class="nc" id="L49">        jPanel3Layout.setHorizontalGroup(</span>
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(hoogteLabel)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(hoogteField)
         );
-<span class="nc" id="L55">        jPanel3Layout.setVerticalGroup(</span>
+<span class="nc" id="L56">        jPanel3Layout.setVerticalGroup(</span>
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(hoogteLabel)
@@ -60,21 +61,21 @@ public class CilinderPanel extends VormPanel {
                 .addComponent(hoogteField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-<span class="nc" id="L63">        straalLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
-<span class="nc" id="L64">        straalLabel.setText(&quot;Straal&quot;);</span>
+<span class="nc" id="L64">        straalLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L65">        straalLabel.setText(&quot;Straal&quot;);</span>
 
-<span class="nc" id="L66">        straalField.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L67">        straalField.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
 
-<span class="nc" id="L68">        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);</span>
-<span class="nc" id="L69">        jPanel2.setLayout(jPanel2Layout);</span>
-<span class="nc" id="L70">        jPanel2Layout.setHorizontalGroup(</span>
+<span class="nc" id="L69">        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);</span>
+<span class="nc" id="L70">        jPanel2.setLayout(jPanel2Layout);</span>
+<span class="nc" id="L71">        jPanel2Layout.setHorizontalGroup(</span>
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(straalLabel)
                 .addGap(0, 11, Short.MAX_VALUE))
             .addComponent(straalField)
         );
-<span class="nc" id="L77">        jPanel2Layout.setVerticalGroup(</span>
+<span class="nc" id="L78">        jPanel2Layout.setVerticalGroup(</span>
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(straalLabel)
@@ -82,9 +83,9 @@ public class CilinderPanel extends VormPanel {
                 .addComponent(straalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-<span class="nc" id="L85">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);</span>
-<span class="nc" id="L86">        this.setLayout(layout);</span>
-<span class="nc" id="L87">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L86">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);</span>
+<span class="nc" id="L87">        this.setLayout(layout);</span>
+<span class="nc" id="L88">        layout.setHorizontalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -93,7 +94,7 @@ public class CilinderPanel extends VormPanel {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-<span class="nc" id="L96">        layout.setVerticalGroup(</span>
+<span class="nc" id="L97">        layout.setVerticalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -102,7 +103,7 @@ public class CilinderPanel extends VormPanel {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-<span class="nc" id="L105">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L106">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField hoogteField;
     private javax.swing.JLabel hoogteLabel;
@@ -114,17 +115,17 @@ public class CilinderPanel extends VormPanel {
     
     @Override
     public boolean voegToe() {
-<span class="nc" id="L117">        fout = &quot;&quot;; foutGevonden = false;</span>
+<span class="nc" id="L118">        fout = &quot;&quot;; foutGevonden = false;</span>
         //Check geldigheid van waardes
-<span class="nc bnc" id="L119" title="All 2 branches missed.">        if (!vormControle.isGeldigeDouble(hoogteField.getText())) addFout(&quot;hoogte&quot;);</span>
-<span class="nc bnc" id="L120" title="All 2 branches missed.">        if (!vormControle.isGeldigeDouble(straalField.getText())) addFout(&quot;straal&quot;);</span>
-<span class="nc bnc" id="L121" title="All 2 branches missed.">        if (foutGevonden) {</span>
-<span class="nc" id="L122">            laatFoutmeldingZien();</span>
-<span class="nc" id="L123">            return false;</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">        if (!vormControle.isGeldigeDouble(hoogteField.getText())) addFout(&quot;hoogte&quot;);</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        if (!vormControle.isGeldigeDouble(straalField.getText())) addFout(&quot;straal&quot;);</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">        if (foutGevonden) {</span>
+<span class="nc" id="L123">            laatFoutmeldingZien();</span>
+<span class="nc" id="L124">            return false;</span>
         }
         //Maak cilinder aan
-<span class="nc" id="L126">        vormControle.maakCilinder(vormControle.parseDouble(straalField.getText()), vormControle.parseDouble(hoogteField.getText()));</span>
-<span class="nc" id="L127">        return true;</span>
+<span class="nc" id="L127">        vormControle.maakCilinder(vormControle.parseDouble(straalField.getText()), vormControle.parseDouble(hoogteField.getText()));</span>
+<span class="nc" id="L128">        return true;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.6.3.201306030806</span></div></body></html>

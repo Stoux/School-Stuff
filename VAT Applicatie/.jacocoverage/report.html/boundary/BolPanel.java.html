@@ -7,20 +7,21 @@ package boundary;
 import control.VormControle;
 
 /**
- *
- * @author Leon
+ * Panel voor het toevoegen van een Bol Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class BolPanel extends VormPanel {
-
-    private VormControle vormControle;
     
     /**
      * Creates new form BolPanel
      */
-<span class="nc" id="L20">    public BolPanel(VormControle vormControle) {</span>
-<span class="nc" id="L21">        this.vormControle = vormControle;</span>
-<span class="nc" id="L22">        initComponents();</span>
-<span class="nc" id="L23">    }</span>
+    public BolPanel(VormControle vormControle) {
+<span class="nc" id="L21">        super(vormControle);</span>
+<span class="nc" id="L22">        this.vormControle = vormControle;</span>
+<span class="nc" id="L23">        initComponents();</span>
+<span class="nc" id="L24">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,25 +32,25 @@ public class BolPanel extends VormPanel {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L34">        jPanel2 = new javax.swing.JPanel();</span>
-<span class="nc" id="L35">        straalLabel = new javax.swing.JLabel();</span>
-<span class="nc" id="L36">        straalField = new javax.swing.JTextField();</span>
+<span class="nc" id="L35">        jPanel2 = new javax.swing.JPanel();</span>
+<span class="nc" id="L36">        straalLabel = new javax.swing.JLabel();</span>
+<span class="nc" id="L37">        straalField = new javax.swing.JTextField();</span>
 
-<span class="nc" id="L38">        straalLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
-<span class="nc" id="L39">        straalLabel.setText(&quot;Straal&quot;);</span>
+<span class="nc" id="L39">        straalLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L40">        straalLabel.setText(&quot;Straal&quot;);</span>
 
-<span class="nc" id="L41">        straalField.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L42">        straalField.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
 
-<span class="nc" id="L43">        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);</span>
-<span class="nc" id="L44">        jPanel2.setLayout(jPanel2Layout);</span>
-<span class="nc" id="L45">        jPanel2Layout.setHorizontalGroup(</span>
+<span class="nc" id="L44">        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);</span>
+<span class="nc" id="L45">        jPanel2.setLayout(jPanel2Layout);</span>
+<span class="nc" id="L46">        jPanel2Layout.setHorizontalGroup(</span>
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(straalLabel)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(straalField)
         );
-<span class="nc" id="L52">        jPanel2Layout.setVerticalGroup(</span>
+<span class="nc" id="L53">        jPanel2Layout.setVerticalGroup(</span>
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(straalLabel)
@@ -57,23 +58,23 @@ public class BolPanel extends VormPanel {
                 .addComponent(straalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-<span class="nc" id="L60">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);</span>
-<span class="nc" id="L61">        this.setLayout(layout);</span>
-<span class="nc" id="L62">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L61">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);</span>
+<span class="nc" id="L62">        this.setLayout(layout);</span>
+<span class="nc" id="L63">        layout.setHorizontalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-<span class="nc" id="L69">        layout.setVerticalGroup(</span>
+<span class="nc" id="L70">        layout.setVerticalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-<span class="nc" id="L76">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L77">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField straalField;
@@ -82,15 +83,15 @@ public class BolPanel extends VormPanel {
 
     @Override
     public boolean voegToe() {
-<span class="nc" id="L85">        fout = &quot;&quot;; foutGevonden = false;</span>
-<span class="nc bnc" id="L86" title="All 2 branches missed.">        if (!vormControle.isGeldigeDouble(straalField.getText())) addFout(&quot;straal&quot;);</span>
-<span class="nc bnc" id="L87" title="All 2 branches missed.">        if (foutGevonden) {</span>
-<span class="nc" id="L88">            laatFoutmeldingZien();</span>
-<span class="nc" id="L89">            return false;</span>
+<span class="nc" id="L86">        fout = &quot;&quot;; foutGevonden = false;</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">        if (!vormControle.isGeldigeDouble(straalField.getText())) addFout(&quot;straal&quot;);</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        if (foutGevonden) {</span>
+<span class="nc" id="L89">            laatFoutmeldingZien();</span>
+<span class="nc" id="L90">            return false;</span>
         }
         //Maak cilinder aan
-<span class="nc" id="L92">        vormControle.maakBol(vormControle.parseDouble(straalField.getText()));</span>
-<span class="nc" id="L93">        return true;</span>
+<span class="nc" id="L93">        vormControle.maakBol(vormControle.parseDouble(straalField.getText()));</span>
+<span class="nc" id="L94">        return true;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.6.3.201306030806</span></div></body></html>

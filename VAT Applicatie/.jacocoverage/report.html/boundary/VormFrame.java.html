@@ -8,8 +8,10 @@ import control.VormControle;
 import java.awt.BorderLayout;
 
 /**
- *
- * @author Leon
+ * Frame voor het toevoegen van een Form
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class VormFrame extends javax.swing.JFrame {
 
@@ -17,61 +19,61 @@ public class VormFrame extends javax.swing.JFrame {
     private HoofdFrame hoofdFrame;
     
     /**
-     * Creates new form BlokFrame
+     * Creates new form VormFrame
      */
-<span class="nc" id="L22">    public VormFrame(HoofdFrame hoofdFrame, VormControle vormControle, String type) {</span>
-<span class="nc" id="L23">        this.hoofdFrame = hoofdFrame;</span>
-<span class="nc" id="L24">        initComponents();</span>
+<span class="nc" id="L24">    public VormFrame(HoofdFrame hoofdFrame, VormControle vormControle, String type) {</span>
+<span class="nc" id="L25">        this.hoofdFrame = hoofdFrame;</span>
+<span class="nc" id="L26">        initComponents();</span>
         
         //Maak het correcte panel aan
-<span class="nc bnc" id="L27" title="All 14 branches missed.">        switch(type.toLowerCase()) {</span>
+<span class="nc bnc" id="L29" title="All 14 branches missed.">        switch(type.toLowerCase()) {</span>
             case &quot;blok&quot;:
-<span class="nc" id="L29">                vormPanel = new BlokPanel(vormControle);</span>
-<span class="nc" id="L30">                setVormLabelText(&quot;Blok&quot;);</span>
+<span class="nc" id="L31">                vormPanel = new BlokPanel(vormControle);</span>
+<span class="nc" id="L32">                setVormLabelText(&quot;Blok&quot;);</span>
                 
-<span class="nc" id="L32">                break;</span>
+<span class="nc" id="L34">                break;</span>
             case &quot;bol&quot;: 
-<span class="nc" id="L34">                vormPanel = new BolPanel(vormControle);</span>
-<span class="nc" id="L35">                setVormLabelText(&quot;Bol&quot;);</span>
-<span class="nc" id="L36">                break;</span>
+<span class="nc" id="L36">                vormPanel = new BolPanel(vormControle);</span>
+<span class="nc" id="L37">                setVormLabelText(&quot;Bol&quot;);</span>
+<span class="nc" id="L38">                break;</span>
             case &quot;cilinder&quot;:
-<span class="nc" id="L38">                vormPanel = new CilinderPanel(vormControle);</span>
-<span class="nc" id="L39">                setVormLabelText(&quot;Cilinder&quot;);</span>
+<span class="nc" id="L40">                vormPanel = new CilinderPanel(vormControle);</span>
+<span class="nc" id="L41">                setVormLabelText(&quot;Cilinder&quot;);</span>
                 break;
         }
         
         //Voeg de panel toe &amp; Repaint
-<span class="nc" id="L44">        vormPanelHolder.removeAll();</span>
-<span class="nc" id="L45">        vormPanelHolder.setLayout(new BorderLayout());</span>
-<span class="nc" id="L46">        vormPanelHolder.add(vormPanel);</span>
-<span class="nc" id="L47">        revalidate();</span>
-<span class="nc" id="L48">        repaint();</span>
+<span class="nc" id="L46">        vormPanelHolder.removeAll();</span>
+<span class="nc" id="L47">        vormPanelHolder.setLayout(new BorderLayout());</span>
+<span class="nc" id="L48">        vormPanelHolder.add(vormPanel);</span>
+<span class="nc" id="L49">        revalidate();</span>
+<span class="nc" id="L50">        repaint();</span>
         
         //Zet scherm in het midden
-<span class="nc" id="L51">        setLocationRelativeTo(null);</span>
+<span class="nc" id="L53">        setLocationRelativeTo(null);</span>
         
         //Switch naar nieuwe frame
-<span class="nc" id="L54">        hoofdFrame.setEnabled(false);</span>
-<span class="nc" id="L55">        setVisible(true);</span>
-<span class="nc" id="L56">    }</span>
+<span class="nc" id="L56">        hoofdFrame.setEnabled(false);</span>
+<span class="nc" id="L57">        setVisible(true);</span>
+<span class="nc" id="L58">    }</span>
     
     /**
      * Set de vorm label text
      * @param vorm de vorm
      */
     private void setVormLabelText(String vorm) {
-<span class="nc" id="L63">        vormLabel.setText(&quot;Vorm: &quot; + vorm);</span>
-<span class="nc" id="L64">    }</span>
+<span class="nc" id="L65">        vormLabel.setText(&quot;Vorm: &quot; + vorm);</span>
+<span class="nc" id="L66">    }</span>
     
     /**
      * Keer terug naar het hoofdframe
      */
     private void terugNaarHoofdFrame() {
-<span class="nc" id="L70">        hoofdFrame.verversScherm();</span>
-<span class="nc" id="L71">        hoofdFrame.setEnabled(true);</span>
-<span class="nc" id="L72">        setVisible(false);</span>
-<span class="nc" id="L73">        dispose();</span>
-<span class="nc" id="L74">    }</span>
+<span class="nc" id="L72">        hoofdFrame.verversScherm();</span>
+<span class="nc" id="L73">        hoofdFrame.setEnabled(true);</span>
+<span class="nc" id="L74">        setVisible(false);</span>
+<span class="nc" id="L75">        dispose();</span>
+<span class="nc" id="L76">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -82,38 +84,39 @@ public class VormFrame extends javax.swing.JFrame {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L85">        jPanel1 = new javax.swing.JPanel();</span>
-<span class="nc" id="L86">        voegToe = new javax.swing.JButton();</span>
-<span class="nc" id="L87">        annuleerKnop = new javax.swing.JButton();</span>
-<span class="nc" id="L88">        vormLabel = new javax.swing.JLabel();</span>
-<span class="nc" id="L89">        vormPanelHolder = new javax.swing.JPanel();</span>
+<span class="nc" id="L87">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L88">        voegToe = new javax.swing.JButton();</span>
+<span class="nc" id="L89">        annuleerKnop = new javax.swing.JButton();</span>
+<span class="nc" id="L90">        vormLabel = new javax.swing.JLabel();</span>
+<span class="nc" id="L91">        vormPanelHolder = new javax.swing.JPanel();</span>
 
-<span class="nc" id="L91">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L93">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L94">        setTitle(&quot;Leon Stam, 2058473, 10-2013&quot;);</span>
 
-<span class="nc" id="L93">        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, &quot;&quot;, javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));</span>
+<span class="nc" id="L96">        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, &quot;&quot;, javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));</span>
 
-<span class="nc" id="L95">        voegToe.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
-<span class="nc" id="L96">        voegToe.setText(&quot;Voeg Toe!&quot;);</span>
-<span class="nc" id="L97">        voegToe.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L98">        voegToe.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L99">        voegToe.setText(&quot;Voeg Toe!&quot;);</span>
+<span class="nc" id="L100">        voegToe.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L99">                voegToeActionPerformed(evt);</span>
-<span class="nc" id="L100">            }</span>
+<span class="nc" id="L102">                voegToeActionPerformed(evt);</span>
+<span class="nc" id="L103">            }</span>
         });
 
-<span class="nc" id="L103">        annuleerKnop.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
-<span class="nc" id="L104">        annuleerKnop.setText(&quot;Annuleer!&quot;);</span>
-<span class="nc" id="L105">        annuleerKnop.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L106">        annuleerKnop.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L107">        annuleerKnop.setText(&quot;Annuleer!&quot;);</span>
+<span class="nc" id="L108">        annuleerKnop.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L107">                annuleerKnopActionPerformed(evt);</span>
-<span class="nc" id="L108">            }</span>
+<span class="nc" id="L110">                annuleerKnopActionPerformed(evt);</span>
+<span class="nc" id="L111">            }</span>
         });
 
-<span class="nc" id="L111">        vormLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
-<span class="nc" id="L112">        vormLabel.setText(&quot;Vorm: &quot;);</span>
+<span class="nc" id="L114">        vormLabel.setFont(new java.awt.Font(&quot;Segoe UI&quot;, 0, 12)); // NOI18N</span>
+<span class="nc" id="L115">        vormLabel.setText(&quot;Vorm: &quot;);</span>
 
-<span class="nc" id="L114">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
-<span class="nc" id="L115">        jPanel1.setLayout(jPanel1Layout);</span>
-<span class="nc" id="L116">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L117">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L118">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L119">        jPanel1Layout.setHorizontalGroup(</span>
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -125,7 +128,7 @@ public class VormFrame extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-<span class="nc" id="L128">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L131">        jPanel1Layout.setVerticalGroup(</span>
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -137,22 +140,22 @@ public class VormFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-<span class="nc" id="L140">        vormPanelHolder.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));</span>
+<span class="nc" id="L143">        vormPanelHolder.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));</span>
 
-<span class="nc" id="L142">        javax.swing.GroupLayout vormPanelHolderLayout = new javax.swing.GroupLayout(vormPanelHolder);</span>
-<span class="nc" id="L143">        vormPanelHolder.setLayout(vormPanelHolderLayout);</span>
-<span class="nc" id="L144">        vormPanelHolderLayout.setHorizontalGroup(</span>
+<span class="nc" id="L145">        javax.swing.GroupLayout vormPanelHolderLayout = new javax.swing.GroupLayout(vormPanelHolder);</span>
+<span class="nc" id="L146">        vormPanelHolder.setLayout(vormPanelHolderLayout);</span>
+<span class="nc" id="L147">        vormPanelHolderLayout.setHorizontalGroup(</span>
             vormPanelHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 275, Short.MAX_VALUE)
         );
-<span class="nc" id="L148">        vormPanelHolderLayout.setVerticalGroup(</span>
+<span class="nc" id="L151">        vormPanelHolderLayout.setVerticalGroup(</span>
             vormPanelHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-<span class="nc" id="L153">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="nc" id="L154">        getContentPane().setLayout(layout);</span>
-<span class="nc" id="L155">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L156">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L157">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L158">        layout.setHorizontalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -161,7 +164,7 @@ public class VormFrame extends javax.swing.JFrame {
                 .addComponent(vormPanelHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-<span class="nc" id="L164">        layout.setVerticalGroup(</span>
+<span class="nc" id="L167">        layout.setVerticalGroup(</span>
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -171,18 +174,18 @@ public class VormFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-<span class="nc" id="L174">        pack();</span>
-<span class="nc" id="L175">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L177">        pack();</span>
+<span class="nc" id="L178">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void voegToeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voegToeActionPerformed
-<span class="nc bnc" id="L178" title="All 2 branches missed.">        if (vormPanel.voegToe()) {</span>
-<span class="nc" id="L179">            terugNaarHoofdFrame();</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">        if (vormPanel.voegToe()) {</span>
+<span class="nc" id="L182">            terugNaarHoofdFrame();</span>
         }
-<span class="nc" id="L181">    }//GEN-LAST:event_voegToeActionPerformed</span>
+<span class="nc" id="L184">    }//GEN-LAST:event_voegToeActionPerformed</span>
 
     private void annuleerKnopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annuleerKnopActionPerformed
-<span class="nc" id="L184">        terugNaarHoofdFrame();</span>
-<span class="nc" id="L185">    }//GEN-LAST:event_annuleerKnopActionPerformed</span>
+<span class="nc" id="L187">        terugNaarHoofdFrame();</span>
+<span class="nc" id="L188">    }//GEN-LAST:event_annuleerKnopActionPerformed</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton annuleerKnop;

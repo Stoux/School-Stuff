@@ -5,8 +5,10 @@
 package entity;
 
 /**
- *
- * @author Leon
+ * Een Cilinder Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class Cilinder extends Vorm {
 
@@ -18,24 +20,24 @@ public class Cilinder extends Vorm {
      * @param straal De straal van de cirkel
      * @param hoogte De hoogte van de cilinder
      */
-<span class="nc" id="L21">    public Cilinder(double straal, double hoogte) {</span>
-<span class="nc" id="L22">        this.straal = straal;</span>
-<span class="nc" id="L23">        this.hoogte = hoogte;</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L23">    public Cilinder(double straal, double hoogte) {</span>
+<span class="fc" id="L24">        this.straal = straal;</span>
+<span class="fc" id="L25">        this.hoogte = hoogte;</span>
+<span class="fc" id="L26">    }</span>
     
     @Override
     public double getInhoud() {
-<span class="nc" id="L28">        return Math.pow(Math.PI * straal, 2) * hoogte;</span>
+<span class="fc" id="L30">        return Math.pow(Math.PI * straal, 2) * hoogte;</span>
     }
 
     @Override
     public String getNaam() {
-<span class="nc" id="L33">        return &quot;Cilinder&quot;;</span>
+<span class="fc" id="L35">        return &quot;Cilinder&quot;;</span>
     }
 
     @Override
     public String getDimensies() {
-<span class="nc" id="L38">        return &quot;Straal: &quot; + straal + &quot; | Hoogte: &quot; + hoogte;</span>
+<span class="fc" id="L40">        return &quot;Straal: &quot; + straal + &quot; | Hoogte: &quot; + hoogte;</span>
     }
     
 }

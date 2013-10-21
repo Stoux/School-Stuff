@@ -5,8 +5,10 @@
 package entity;
 
 /**
- *
- * @author Leon
+ * Een Blok Vorm
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class Blok extends Vorm  {
 
@@ -20,25 +22,25 @@ public class Blok extends Vorm  {
      * @param breedte De breedte
      * @param lengte De lengte
      */
-<span class="nc" id="L23">    public Blok(double hoogte, double breedte, double lengte) {</span>
-<span class="nc" id="L24">        this.hoogte = hoogte;</span>
-<span class="nc" id="L25">        this.breedte = breedte;</span>
-<span class="nc" id="L26">        this.lengte = lengte;</span>
-<span class="nc" id="L27">    }</span>
+<span class="fc" id="L25">    public Blok(double hoogte, double breedte, double lengte) {</span>
+<span class="fc" id="L26">        this.hoogte = hoogte;</span>
+<span class="fc" id="L27">        this.breedte = breedte;</span>
+<span class="fc" id="L28">        this.lengte = lengte;</span>
+<span class="fc" id="L29">    }</span>
     
     @Override
     public double getInhoud() {
-<span class="fc" id="L31">        return hoogte * breedte * lengte;</span>
+<span class="fc" id="L33">        return hoogte * breedte * lengte;</span>
     }
 
     @Override
     public String getNaam() {
-<span class="fc" id="L36">        return &quot;Blok&quot;;</span>
+<span class="fc" id="L38">        return &quot;Blok&quot;;</span>
     }
 
     @Override
     public String getDimensies() {
-<span class="fc" id="L41">        return &quot;Hoogte: &quot; + hoogte + &quot; | Breedte: &quot; + breedte + &quot; | Lengte: &quot; + lengte;</span>
+<span class="fc" id="L43">        return &quot;Hoogte: &quot; + hoogte + &quot; | Breedte: &quot; + breedte + &quot; | Lengte: &quot; + lengte;</span>
     }
     
 }

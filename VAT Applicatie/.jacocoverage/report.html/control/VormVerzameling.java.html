@@ -9,8 +9,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- *
- * @author Leon
+ * Verzameling class die alle vormen bijhoudt.
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
  */
 public class VormVerzameling implements Serializable {
     
@@ -19,9 +21,9 @@ public class VormVerzameling implements Serializable {
     /**
      * Constructor van VormVerzameling
      */
-<span class="fc" id="L22">    public VormVerzameling() {</span>
-<span class="fc" id="L23">        vormLijst = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L24">    }</span>
+<span class="fc" id="L24">    public VormVerzameling() {</span>
+<span class="fc" id="L25">        vormLijst = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L26">    }</span>
     
     /**
      * Haal een vorm op aan de hand van zijn positie in de lijst
@@ -29,7 +31,7 @@ public class VormVerzameling implements Serializable {
      * @return de Vorm
      */
     public Vorm getVorm(int index) {
-<span class="nc" id="L32">        return vormLijst.get(index);</span>
+<span class="fc" id="L34">        return vormLijst.get(index);</span>
     }
     
     /**
@@ -37,32 +39,32 @@ public class VormVerzameling implements Serializable {
      * @param vorm de vorm
      */
     public void voegToe(Vorm vorm) {
-<span class="nc" id="L40">        vormLijst.add(vorm);</span>
-<span class="nc" id="L41">    }</span>
+<span class="fc" id="L42">        vormLijst.add(vorm);</span>
+<span class="fc" id="L43">    }</span>
     
     /**
      * Verwijder een vorm uit de lijst
      * @param index de positie
      */
     public void verwijderVorm(int index) {
-<span class="nc" id="L48">        vormLijst.remove(index);</span>
-<span class="nc" id="L49">    }</span>
+<span class="fc" id="L50">        vormLijst.remove(index);</span>
+<span class="fc" id="L51">    }</span>
     
     /**
      * Haal alle vormen op
      * @return lijst met alle vormen
      */
     public ArrayList&lt;Vorm&gt; getAlleVormen() {
-<span class="fc" id="L56">        return vormLijst;</span>
+<span class="fc" id="L58">        return vormLijst;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L61">        String s = &quot;&quot;;</span>
-<span class="nc bnc" id="L62" title="All 2 branches missed.">        for (Vorm v : vormLijst) {</span>
-<span class="nc" id="L63">            s = s + &quot;\n&quot; + v.toString();</span>
-<span class="nc" id="L64">        }</span>
-<span class="nc" id="L65">        return s;</span>
+<span class="fc" id="L63">        String s = &quot;&quot;;</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        for (Vorm v : vormLijst) {</span>
+<span class="fc" id="L65">            s = s + &quot;\n&quot; + v.toString();</span>
+<span class="fc" id="L66">        }</span>
+<span class="fc" id="L67">        return s;</span>
     }
     
 }
