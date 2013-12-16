@@ -1,0 +1,10 @@
+15      E. van der Sande                596585741       665331353       Delfzijl        NE    10
+25      A. Scheerder                    596966365       656465163       Delfzijl        NE     5
+43      R. Tabatatahama                 596865668                       Delfzijl        NE    10
+223     F. Bomers                       596753563       686682161       Delfzijl        NE    15
+230     G. van Hamstra                  596674653       666167685       Delfzijl        NE     5
+2289    T. ter Taffijn                  596574157       657515674       Delfzijl        NE     5
+2309    M. van Straten                  596758337       616774666       Delfzijl        NE    15
+2345    N. Janssens                     596514546       658183888       Delfzijl        NE    10
+2903    G. Wagenaar                     596651151                       Delfzijl        NE    10
+3245    G. de Grooterhuis               596654853       615176157       Delfzijl        NE     5
