@@ -10,6 +10,14 @@ package ectltool.opdrachtinterface;
  */
 public abstract class FileModel {
     
+    public void startedECTL() {
+        
+    }
+    
+    public void endedECTL() {
+        
+    }
+    
     
     /**
      * Clean the line

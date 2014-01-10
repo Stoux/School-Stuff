@@ -6,6 +6,8 @@ package ectltool.presentation;
 
 import ectltool.opdracht1.O1Model;
 import ectltool.opdracht1.O1Table;
+import ectltool.opdracht2.O2Model;
+import ectltool.opdracht2.O2Table;
 import javax.swing.JOptionPane;
 import ectltool.opdrachtinterface.OpdrachtCollection;
 import ectltool.reader.AccesFileReader;
@@ -41,6 +43,7 @@ public class MainFrame extends javax.swing.JFrame {
         //Create Opdrachten
         opdrachten = new HashMap<>();
         opdrachten.put(1, new OpdrachtCollection(new O1Table(), new O1Model()));
+        opdrachten.put(2, new OpdrachtCollection(new O2Table(), new O2Model()));
         
         
         //Select opdracht
@@ -386,10 +389,12 @@ public class MainFrame extends javax.swing.JFrame {
 
             @Override
             public void run() {
+                currentOpdracht.getFileModel().startedECTL();
                 fr.extract();
                 fr.clean();
                 fr.transform();
                 fr.load();
+                currentOpdracht.getFileModel().endedECTL();
                 startButton.setEnabled(true);
                 setEnabled(true);
             }

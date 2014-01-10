@@ -21,15 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-        File f = new File("C:\\Users\\Leon\\Documents\\GitHub\\School-Stuff\\ECTool\\ECTL-Tool\\res\\Opdracht1\\A3.txt");
-        f.delete();
-            try (FileWriter fw = new FileWriter(f); BufferedWriter writer = new BufferedWriter(fw)) {
-                int x = 0;
-                while (x < 10000) {
-                    write(writer,++x + ",K. van Boxelaar,21579165,638554585,Zeebrugge,BE,5");          
-                }
-            }
-        new MainFrame().setVisible(true);
+            new MainFrame().setVisible(true);
         } catch (Exception e) {
             
         }

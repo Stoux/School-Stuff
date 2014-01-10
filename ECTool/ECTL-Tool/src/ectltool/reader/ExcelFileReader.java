@@ -40,7 +40,7 @@ public class ExcelFileReader extends FileReader {
         
         int currentProgress = 0;
         double addedProgress = 0.0;
-        double per = 15.0 / lastRow;
+        double per = 15.0 / (lastRow - skippedLines.size());
         
         
         try {
@@ -49,26 +49,28 @@ public class ExcelFileReader extends FileReader {
             
             int row = 0;
             while (row < lastRow) {
-                try {
-                    String[] line = new String[coloms];
-                    int colom = 0;
-                    while (colom < coloms) {
-                        line[colom] = sheet.getCell(colom, row).getContents();
-                        colom++;
-                    }
-                    System.out.println(Arrays.toString(line));
-                    lines.add(line);
-                    row++;
+                if (!skippedLines.contains(row + 1)) {
+                    try {
+                        String[] line = new String[coloms];
+                        int colom = 0;
+                        while (colom < coloms) {
+                            line[colom] = sheet.getCell(colom, row).getContents();
+                            colom++;
+                        }
+                        System.out.println(Arrays.toString(line));
+                        lines.add(line);
 
-                    addedProgress += per;
-                    int bot = (int) Math.floor(addedProgress);
-                    if (bot > currentProgress) {
-                        currentProgress = bot;
-                        _.getMF().setProgress(0 + currentProgress);
-                    }    
-                } catch (Exception e) {
-                     System.out.println("Exception Excel Extraction: "+ e.getMessage());
+                        addedProgress += per;
+                        int bot = (int) Math.floor(addedProgress);
+                        if (bot > currentProgress) {
+                            currentProgress = bot;
+                            _.getMF().setProgress(0 + currentProgress);
+                        }    
+                    } catch (Exception e) {
+                         System.out.println("Exception Excel Extraction: "+ e.getMessage());
+                    }
                 }
+                row++;
             }
         } catch (BiffException | IOException e) {
             System.out.println("Exception Excel Extraction: "+ e.getMessage());

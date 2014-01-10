@@ -45,6 +45,9 @@ public class AccesFileReader extends FileReader {
             for (String tableName : db.getTableNames()) {
                 _.log("Opening table: "+ tableName);
                 Table t = db.getTable(tableName);
+                
+                if (t.getColumnCount() != colomOrder.size()) continue;
+                
                 double per = groupper / t.getRowCount();
                 
                 int colomCount = t.getColumnCount();

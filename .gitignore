@@ -214,3 +214,4 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 /ECTool/ECTL-Tool/nbproject/private/
+/ECTool/FilmSite/nbproject/private/
