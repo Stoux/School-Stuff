@@ -1,0 +1,250 @@
+86;A. Brinkman;201556681;;Amsterdam (NL);10
+54;A. Classen;206735576;;Amsterdam (NL);15
+580;A. de Pamen;101537621;678159686;Rotterdam (NL);10
+416;A. den Brabander;108473868;682741424;Rotterdam (NL);5
+1151;A. Fernhout;102117562;681113514;Rotterdam (NL);15
+308;A. Franken;596966415;;Delfzijl (NL);10
+581;A. Gietman;101788121;;Rotterdam (NL);15
+806;A. Hartog;704508144;;Den Haag (NL);5
+1481;A. Janssen;596505470;;Delfzijl (NL);10
+1860;A. Krïse;206154636;697155474;Amsterdam (NL);15
+143;A. Le DUC;107417677;681253313;Rotterdam (FR);10
+153;A. Malvaars;208865678;;Amsterdam (NL);10
+743;A. Nannings;104138364;;Rotterdam (NL);10
+897;A. Opsteeg;206647376;;Amsterdam (NL);5
+349;A. Oudvorst;206396176;;Amsterdam (NL);5
+221;A. Prins;104346144;676561868;Rotterdam (NL);5
+953;A. Rutten;596248654;687915565;Delfzijl (NL);10
+89;A. Schouten;103547323;681413811;Rotterdam (NL);15
+931;A. Siroen;203754173;;Amsterdam (NL);10
+977;A. Suppers;106885826;685251843;Rotterdam (NL);5
+212;A. Teeling;701648701;695387656;Den Haag (NL);10
+445;A. Trouwgod;201465151;697101871;Amsterdam (NL);5
+962;A. van Beusekom;701616461;681113558;Den Haag (NL);15
+713;A. van Bielderveld;201435771;;Amsterdam (NL);10
+1881;A. van Eekeren;101747771;686211363;Rotterdam (NL);5
+106;B. van der Aa;104559724;;Rotterdam (NL);5
+77;C. Hagenaar;201875731;677437878;Amsterdam (NL);5
+934;C. Bie;204566564;;Amsterdam (NL);5
+975;C. Cantina;104656604;;Rotterdam (NL);5
+78;A. van Vugt;103578443;;Rotterdam (NL);10
+752;B. van de Kerkhofjes;104766454;686647565;Rotterdam (NL);10
+739;A. van Driel;105514595;685545555;Rotterdam (NL);10
+972;C. der Wetters;206871386;;Amsterdam (NL);10
+1201;B. Martina;208610908;678866686;Amsterdam (NL);10
+69;B. van der Werff;555661155;;Harlingen (NL);10
+1345;A. van der Heijden;596564358;;Delfzijl (NL);15
+70;A. Wickel;206286396;;Amsterdam (NL);15
+879;A. van der Veldhuis;596118597;687141575;Delfzijl (NL);10
+675;B. Rolink;596377115;678665383;Delfzijl (NL);10
+912;B. ter Apel;596847445;;Delfzijl (NL);10
+2071;C. Gorisse;704348794;698505175;Den Haag (NL);10
+159;A. Vitters;704417724;;Den Haag (NL);5
+372;A. Weger;32411655351;;Antwerpen (NL);10
+2;C. Havvel;708511658;686734262;Den Haag (NL);10
+274;C. Meyers;202201422;;Amsterdam (NL);5
+248;C. Phaff;104753544;688616383;Rotterdam (NL);10
+427;C. Renirie;707337587;;Den Haag (NL);15
+483;C. Schoemaker;107654667;688511564;Rotterdam (NL);10
+246;C. van de Oersen;596875316;681311515;Delfzijl (NL);5
+766;C. van der Stad;704481534;687707173;Den Haag (NL);15
+659;C. Wassink;205165875;;Amsterdam (NL);5
+768;C. Westhof;205364705;691407414;Amsterdam (NL);10
+3691;C. Winselaar;103714623;686716363;Rotterdam (NL);5
+1389;Cees Parker;107465750;;Rotterdam (NL);10
+857;D. Czarnikova;48137578617;;Gdansk (PO);15
+421;D. de Botter;104851414;;Rotterdam (NL);5
+312;D. Glad;706693606;683364635;Den Haag (NL);5
+98;D. Haven;707924527;678865686;Den Haag (NL);10
+744;D. Timmer;596762545;;Delfzijl (NL);10
+467;D. Timmerboer;106741466;686885161;Rotterdam (NL);5
+110;G. Schretlen;207077607;;Amsterdam (NL);5
+87;G. ter Weijers;207305557;683347434;Amsterdam (NL);15
+592;G. van Beek;708747228;677685676;Den Haag (NL);10
+622;G. van het Hof;201575261;;Amsterdam (NL);10
+461;G. Veraart;596481173;;Delfzijl (NL);15
+976;G. Vogelhang;203817703;;Amsterdam (NL);5
+2903;G. Wagenaar;596651151;;Delfzijl (NL);10
+431;G. Walewski;206555606;;Amsterdam (NL);5
+1811;G. Wilkens;205845215;;Amsterdam (NL);5
+249;G. Witteveen;101836171;765567252;Rotterdam (NL);5
+57;G. Wolffers;106756786;682656626;Rotterdam (NL);5
+880;H. Arends;105311185;685957789;Rotterdam (NL);10
+589;H. Bekkering;106833186;;Rotterdam (NL);15
+700;H. Beving;705886725;678554181;Den Haag (NL);5
+586;H. Boeschoten;205324255;;Amsterdam (NL);10
+619;H. Cuppens;208566698;;Amsterdam (NL);5
+405;H. Damen;203417603;;Amsterdam (NL);10
+626;H. de Koning;208877138;;Amsterdam (NL);15
+329;H. Degen;208361208;;Amsterdam (NL);15
+946;H. Geertsen;596556634;686535060;Delfzijl (NL);5
+851;H. Grisel;705888815;;Den Haag (NL);10
+114;H. Hendriks;201473761;;Amsterdam (NL);10
+1313;H. Hesman;707712317;;Den Haag (NL);5
+2001;H. Hoosen;203774763;;Amsterdam (NL);15
+419;H. Joling;107695177;698877181;Rotterdam (NL);5
+365;H. Naterop;207773387;681155818;Amsterdam (NL);5
+1592;H. Peljak;105753055;693645535;Rotterdam (NL);5
+240;H. Ruijters;105545665;;Rotterdam (NL);5
+1234;H. Tekelenburg;105467565;;Rotterdam (NL);5
+53;H. ten Hage;205053905;;Amsterdam (NL);5
+612;H. Tohifi;108727568;695758151;Rotterdam (NL);5
+351;H. van Bottenburg;209572809;685567555;Amsterdam (NL);10
+379;H. van Ingen;706774836;687965474;Den Haag (NL);5
+439;H. van Opstalp;203335503;;Amsterdam (NL);5
+409;H. Vergouwen;596315691;681628414;Delfzijl (NL);5
+532;J. Albers;105317795;684731141;Rotterdam (NL);5
+706;H. van Kolck;204831134;;Amsterdam (NL);10
+1808;H. van Werk;207873597;;Amsterdam (NL);10
+31;I. Soudijn;708665808;686497464;Den Haag (NL);10
+1301;I. van Kempen;205685805;995477453;Amsterdam (NL);10
+473;J. Berends;108159378;;Rotterdam (NL);10
+453;I. Stöwe - Profijt;596475585;;Delfzijl (NL);15
+699;J. Bohlander;206156776;687897571;Amsterdam (NL);10
+67;J. Cornelissen;108344468;684867343;Rotterdam (NL);5
+1622;J. de Kest;103514653;695574555;Rotterdam (NL);10
+708;J. Droomers;105307665;677135785;Rotterdam (NL);10
+861;J. Duismann;108643738;678554585;Rotterdam (NL);5
+810;J. Hartgring;205482195;;Amsterdam (NL);15
+533;M. Cammer;10544791;676661363;Rotterdam (NL);10
+774;W. de Jong;101454521;686776361;Rotterdam (NL);5
+338;M. van de Laakkwartier;101536271;;Rotterdam (NL);15
+1795;V. van Zuidam;103544623;;Rotterdam (NL);5
+1265;J. Hermsen;103617653;685251858;Rotterdam (NL);5
+83;L. van Loondrijver;103685443;684578141;Rotterdam (NL);5
+171;W. Douglas;103804123;691275515;Rotterdam (NL);10
+919;T. Lochtenberg;103871283;;Rotterdam (NL);10
+58;W. de Bosch;104111124;681653515;Rotterdam (NL);10
+91;M. de Visser;104145774;686588565;Rotterdam (NL);5
+688;J. van den Elshout;104187784;;Rotterdam (NL);5
+554;W. Bos;104194550;;Rotterdam (NL);10
+1327;S. van Prossen;104467594;679315898;Rotterdam (NL);10
+633;T. Walner;104513364;681585414;Rotterdam (NL);10
+284;P. Augustijn;104573494;696454263;Rotterdam (NL);10
+761;M. van Straten;104633864;677323575;Rotterdam (NL);5
+535;S. van den Ernst;104646674;685985555;Rotterdam (NL);10
+1001;P. Speld;104701124;685057750;Rotterdam (NL);10
+15;P. ter Papen;104714034;678677181;Rotterdam (NL);10
+1067;J. van Loonopzand;105191765;684183646;Rotterdam (NL);10
+42;P. Wouters;105404635;;Rotterdam (NL);10
+65;P. van Haerenbroecks;105448155;677877675;Rotterdam (NL);10
+446;K. van Rever;105468795;943136313;Rotterdam (NL);10
+773;S. van Delft;105553185;785757383;Rotterdam (NL);10
+38;J. Karthaus;105574865;679572894;Rotterdam (NL);5
+371;J. Roffel;105631555;;Rotterdam (NL);5
+798;P. Hermsen;105853925;;Rotterdam (NL);5
+725;P. van Drempt;106334956;;Rotterdam (NL);10
+493;K. de Vos;106353680;;Rotterdam (NL);10
+871;L. de Boogaard;106681666;693417635;Rotterdam (NL);10
+103;M. Verplak;106777566;699516055;Rotterdam (NL);10
+611;J. van den Berghbexkens;107159897;685474858;Rotterdam (NL);5
+692;R. Simonis;107405527;686877868;Rotterdam (NL);10
+213;R. van de Baaij;107416177;;Rotterdam (NL);10
+702;K. Klÿser;201763551;687405171;Amsterdam (NL);10
+4345;L. te Riesen;203142193;;Amsterdam (NL);5
+122;M. de Meijer;203151653;;Amsterdam (NL);10
+241;R. de Witsen;203465833;;Amsterdam (NL);10
+866;O. van der Linden;203657603;;Amsterdam (NL);10
+1242;K. Grandia;203666963;678571486;Amsterdam (NL);5
+952;M. Baal;203712493;;Amsterdam (NL);10
+531;T. Loomens;204157734;796526161;Amsterdam (NL);10
+263;M. Grimm;204183584;;Amsterdam (NL);5
+390;J. Overbeek - Minnen;204458144;683578333;Amsterdam (NL);10
+198;R. op Latena;204493164;684715505;Amsterdam (NL);5
+437;S. van Oortster;204511804;;Amsterdam (NL);10
+716;K. Smolders;204535634;;Amsterdam (NL);15
+127;N. Bogers - Kemp;204686564;681486313;Amsterdam (NL);15
+296;V. de Guis;205174365;678141383;Amsterdam (NL);10
+789;M. Claessen;205315495;;Amsterdam (NL);10
+487;J. van Bodegom;205317905;;Amsterdam (NL);10
+239;S. van Gal;205338795;;Amsterdam (NL);5
+547;M. Schutten;205341945;;Amsterdam (NL);5
+297;W. Baduro;205355435;;Amsterdam (NL);10
+1844;W. Bosen;205474405;;Amsterdam (NL);5
+256;M. Hattink;205546365;694363141;Amsterdam (NL);10
+356;R. Schutte;205644865;;Amsterdam (NL);5
+323;P. de Bruijne;205867445;;Amsterdam (NL);10
+1403;T. Boer;206335176;;Amsterdam (NL);10
+269;L. van Bakker;206545666;;Amsterdam (NL);10
+413;S. de Biesmans;206551580;696543161;Amsterdam (NL);10
+194;M. Kramer;206588876;;Amsterdam (NL);15
+815;M. Burgers;206654886;687241575;Amsterdam (NL);10
+894;R. Homamadir;206682636;686876565;Amsterdam (NL);15
+1277;J. van der Bussel;206712436;;Amsterdam (NL);5
+793;J. Schoester;207141377;;Amsterdam (NL);5
+703;J. van Ophuijsen;207165137;;Amsterdam (NL);10
+236;M. ter Grootaarts;207323777;;Amsterdam (NL);5
+917;T. Boumans;207378677;;Amsterdam (NL);10
+10;K. van Boekel;207453767;;Amsterdam (NL);10
+993;W. Denies;207534587;685476722;Amsterdam (NL);10
+805;R. van den Berg;207547870;;Amsterdam (NL);5
+1480;M. van Welbie - Eckelboom;207585397;;Amsterdam (NL);10
+300;L. Maas;207758157;;Amsterdam (NL);10
+1367;M. ter Hoeve;208188668;;Amsterdam (NL);10
+441;J. Knijf;208355568;696154161;Amsterdam (NL);15
+694;P. Gouw;208560408;;Amsterdam (NL);5
+313;K. Oppelaar;208593568;;Amsterdam (NL);10
+648;R. van Weel;208866388;;Amsterdam (NL);15
+233;K. Crombach;209317679;;Amsterdam (NL);5
+204;M. Hermans;517455000;;Harlingen (NL);5
+740;J. Janssen;517756889;;Harlingen (NL);10
+854;M. Rivier;596115678;;Delfzijl (NL);10
+4578;P. Scholte;596156657;;Delfzijl (NL);10
+901;M. de Nijs;596165864;;Delfzijl (NL);10
+2113;L. Schallenberg;596165869;;Delfzijl (NL);5
+141;J. Meiners;596177645;677456777;Delfzijl (NL);5
+674;M. Erkens;596214544;679550645;Delfzijl (NL);5
+1333;L. Frantchechkoff;596327557;;Delfzijl (NL);10
+1298;K. Schoonoord;596461666;677758373;Delfzijl (NL);10
+202;J. van de Geijn;596541186;;Delfzijl (NL);5
+368;S. van Hasselbraam;596567168;;Delfzijl (NL);5
+1489;Q. van Megen;596637411;;Delfzijl (NL);10
+433;S. Tuinenga;596661536;677427878;Delfzijl (NL);5
+1411;R. van Straten;596675131;688817581;Delfzijl (NL);10
+158;S. Jacobs;596678553;;Delfzijl (NL);5
+480;S. van de Hof;596774755;684356545;Delfzijl (NL);5
+955;W. Boekhorst - Lefeber;596786555;686176767;Delfzijl (NL);10
+210;M. Horn;596854477;;Delfzijl (NL);10
+43;R. Tabatatahama;596865668;;Delfzijl (NL);20
+1900;R. Westenhagen;596945596;;Delfzijl (NL);10
+1583;M. van Gulikker;596978271;683564939;Delfzijl (NL);5
+826;S. van Gurpers;701119051;;Den Haag (NL);10
+1765;P. Bijlard;701246701;;Den Haag (NL);10
+1344;J. Maas;701413451;677743373;Den Haag (NL);15
+1438;M. van de Baarle;701567481;677199686;Den Haag (NL);10
+474;T. Berns;701655751;688366388;Den Haag (NL);5
+422;L. van 't Waterdorp;702712822;;Den Haag (NL);5
+12;M. Mallo;704476704;684160343;Den Haag (NL);15
+4140;J. Reckman;704530814;;Den Haag (NL);10
+207;M. Goulmy;704551904;687775878;Den Haag (NL);10
+667;J. van de Vluchtweg;704676514;678313585;Den Haag (NL);10
+1499;U. Nooren;704731584;689878797;Den Haag (NL);10
+271;R. Spijkerman;704881734;677366383;Den Haag (NL);10
+2301;T. Sips;705379215;678593484;Den Haag (NL);10
+623;J. van Lit;705395485;;Den Haag (NL);10
+552;J. Van Vlooten;706454896;688511585;Den Haag (NL);5
+1469;M. Titselaar;706767886;;Den Haag (NL);10
+399;J. van Deijlermolens;706846836;;Den Haag (NL);10
+836;P. Hulsen;707147817;;Den Haag (NL);10
+551;J. Snijders;707164647;;Den Haag (NL);15
+76;M. Klohilm;707488307;;Den Haag (NL);10
+4;J. van Erp;207685637;684431646;Amsterdam (NL);10
+625;M. Vrolings;707783557;;Den Haag (NL);5
+1191;J. van Vugt;708177808;;Den Haag (NL);5
+686;L. Kleijne;708453618;678137686;Den Haag (NL);5
+2178;K. van Driel;709547749;;Den Haag (NL);5
+945;W. Duivens;104753874;;Rotterdam (NL);15
+136;W. Haefkens;208463588;;Amsterdam (NL);5
+950;W. Heesbeen;205345585;676716161;Amsterdam (NL);10
+902;W. Hermans;106181420;735684646;Rotterdam (NL);10
+144;W. Holland;706748626;685135555;Den Haag (NL);10
+318;W. Kempen;205165165;684764341;Amsterdam (NL);5
+495;W. Moonen;207181217;;Amsterdam (NL);10
+954;W. Op 't Dam;101146261;;Rotterdam (NL);10
+1777;W. Pfeil;104156624;;Rotterdam (NL);10
+1508;W. Reekers;206344576;687949878;Amsterdam (NL);5
+1578;W. van Dingen;104174194;678443585;Delfzijl (NL);10
+470;W. Vermeulen;107775697;677866373;Rotterdam (NL);10
+820;X. op Zusteren;517156660;;Harlingen (NL);5
+20;Y. Helponen;201175591;685407151;Amsterdam (NL);5
+656;Y. Worst;103344543;682317525;Rotterdam (NL);10

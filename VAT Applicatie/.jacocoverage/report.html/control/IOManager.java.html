@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="nl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>IOManager.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="right"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;VAT_Applicatie&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.html" class="el_package">control</a> &gt; <span class="el_source">IOManager.java</span></div><h1>IOManager.java</h1><pre class="source lang-java linenums">/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package control;
+
+import boundary.FileSelector;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import javax.swing.JOptionPane;
+
+/**
+ * Manager voor het wegschrijven/ophalen van bestanden
+ * Module: VH5I
+ * Datum: 10-2013
+ * @author Leon Stam
+ */
+<span class="nc" id="L20">public class IOManager {</span>
+    
+    /**
+     * Schrijf een {@link VormVerzameling} weg naar de hardeschijf
+     * @param vV De verzamling
+     * @return gelukt
+     */
+    public static boolean saveVormVerzameling(VormVerzameling vV) {
+        try {
+<span class="fc" id="L29">            FileSelector fileSelector = new FileSelector();</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">            if (!fileSelector.showSaveDialog()) return false;</span>
+<span class="fc" id="L31">            FileOutputStream fos = new FileOutputStream(fileSelector.getSelecteerdeFile());</span>
+<span class="pc" id="L32">            try (ObjectOutputStream oos = new ObjectOutputStream(fos)) {</span>
+<span class="fc" id="L33">                oos.writeObject(vV);</span>
+<span class="pc bpc" id="L34" title="6 of 8 branches missed.">            }</span>
+<span class="fc" id="L35">            return true;</span>
+<span class="nc" id="L36">        } catch (Exception e) {</span>
+<span class="nc" id="L37">            JOptionPane.showMessageDialog(null, &quot;Het opslaan is mislukt!&quot;, &quot;Mislukt&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L38">            return false;</span>
+        }
+    }
+    
+    /**
+     * Laad een {@link VormVerzameling} van de harde schijf
+     * @return de VormVerzameling of null als er niks gevonden is
+     */
+    public static VormVerzameling laadVormVerzameling() {
+        try {
+<span class="fc" id="L48">            FileSelector selector = new FileSelector();</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (!selector.showOpenDialog()) return null;</span>
+            VormVerzameling vV;
+<span class="fc" id="L51">            FileInputStream fis = new FileInputStream(selector.getSelecteerdeFile());</span>
+<span class="pc" id="L52">            try (ObjectInputStream ois = new ObjectInputStream(fis)) {</span>
+<span class="fc" id="L53">                vV = (VormVerzameling) ois.readObject();</span>
+<span class="pc bpc" id="L54" title="6 of 8 branches missed.">            }</span>
+<span class="fc" id="L55">            return vV;</span>
+<span class="nc" id="L56">        } catch (Exception e) {</span>
+<span class="nc" id="L57">            JOptionPane.showMessageDialog(null, &quot;Dit bestand is niet een vorm verzameling!&quot;, &quot;Fout bestand&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L58">            return null;</span>
+        }
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.6.3.201306030806</span></div></body></html>
